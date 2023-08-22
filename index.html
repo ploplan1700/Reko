@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendacion Entre Amigos</title>
+    <link rel="stylesheet" href="rekoo.css">
+</head>
+<body>
+<!--Falta Agregar botones Nav
+*Historial, Ratearlo con estrella, buscar reco tomi
+-->    
+<h1>REKO</h1>
+<nav class="index-1">
+<!--El navegador con los distintos tabs-->
+<a href="#Inicio">Inicio</a>
+<a href="chicos1.html">Players</a>
+<a href="historial.html">Historial</a>  <!--Para linkearlo primero debo crear la nueva pagina, donde ahi la linkeo
+al archivo css y aca lo linkeo al html-->
+<a href="ranking.html">Ranking</a>
+</nav>
+<form id="Rekoform" action="submit.php" method="post">
+    <table>
+        <tr>
+            <td>Pelicula</td>
+            <td><input type="text" name="Pelicula" required></td>
+        </tr>
+        <tr>
+            <td>Genero</td>
+            <td><input type="text" name="Genero"></td>
+        </tr>
+        <tr>
+            <td>Puntaje</td>
+            <td><input type="text" name="Puntaje" id="scoreInput" required></td>
+        </tr>
+        <tr>
+            <td>Fecha</td>
+            <td><input type="text" name="Fecha"></td>
+        </tr>
+    </table>
+    <input type="submit" title="Recomendacion" value="Recomendacion">
+    <!-- Add a JavaScript block to handle form submission -->
+    <script>
+        // Get the form element
+        const form = document.getElementById('Rekoform');
+
+        // Add a submit event listener
+        form.addEventListener('submit', function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Perform any additional actions or validations here
+
+            // Submit the form
+            form.submit();
+        });
+    </script>
+</form>
+<section id="Submissions">
+    </body>
+    </html>
