@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reko Chicos</title>
+    <link rel="stylesheet" href="rekoo.css">
+</head>
+<body>
+<div class="card1"> <!--Es un container tag y se estila clase en css con .-->
+<h2>Gordo</h2>
+<button class="info1">DATA</button>
+<div class="masinfo1"></div>
+</div>
+<script>
+    const buttons = document.querySelectorAll('.info1');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const card = button.closest('.card1');
+        const masinfo1 = card.querySelector('.masinfo1'); // Corrected class name case
+        
+        if (masinfo1.style.display === 'none' || masinfo1.style.display === '') {
+          masinfo1.style.display = 'block'; // Corrected case of 'block'
+        } else {
+          masinfo1.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
